@@ -659,7 +659,7 @@ main .section-more-item .content .decs p {
   line-height: 157.5%;
 }
 main .video-section {
-  padding: 100px 0;
+  padding: 100px 0 50px;
 }
 main .video-section img {
   width: 100%;
@@ -671,6 +671,164 @@ main .video-section .icon {
   width: auto;
   transform: translate(-50%, -50%);
   z-index: 3;
+}
+main .customer {
+  padding: 50px 0 50px;
+}
+main .customer .container {
+  max-width: 1155px;
+}
+main .customer .container .title h2 {
+  color: #F89422;
+  font-size: 36px;
+  text-align: center;
+  font-weight: bold;
+  -webkit-text-stroke: 1px white;
+  margin-bottom: 50px;
+}
+main .customer .container .wwd-slie-6 .item-slide {
+  border: #F89422 solid 4px;
+  border-radius: 27px;
+  height: 100%;
+  min-height: 380px;
+  background: var(--white);
+  padding: 40px 2.5rem 3.125rem;
+  position: relative;
+  z-index: 99;
+}
+main .customer .container .wwd-slie-6 .item-slide .avatar figure {
+  display: flex;
+  justify-content: center;
+}
+main .customer .container .wwd-slie-6 .item-slide .icon figure {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+main .customer .container .wwd-slie-6 .item-slide .desc {
+  font-size: 20px;
+}
+main .khuyenmai {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .khuyenmai .row {
+  padding: 100px 0;
+}
+main .khuyenmai .row .col-right .title h4 {
+  font-size: 36px;
+  line-height: 214%;
+  font-weight: bold;
+  color: #000000;
+}
+main .khuyenmai .row .col-right .title h4 span {
+  color: #FF8800;
+}
+main .khuyenmai .row .col-right .title h3 {
+  font-size: 52px;
+  line-height: 214%;
+  color: #F30000;
+  font-weight: bold;
+}
+main .khuyenmai .row .col-right .title p {
+  font-size: 32px;
+  line-height: 214%;
+}
+main .khuyenmai .row .col-right .content {
+  font-size: 24px;
+  line-height: 214%;
+}
+main .khuyenmai .box-container {
+  min-height: 237px;
+  background-color: #FF9E2F;
+  border-radius: 12px;
+  position: relative;
+  z-index: 3;
+  padding: 50px 100px;
+}
+main .khuyenmai .box-container h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .khuyenmai .box-container .form-co {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+main .khuyenmai .box-container .form-co input {
+  border: 0;
+  width: 300px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  font-family: var(--f-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #000000;
+  outline: 0;
+  padding: 1.125rem 1.875rem;
+  height: 40px;
+}
+main .khuyenmai .box-container .form-co button {
+  padding: 10px 25px;
+  border-radius: 6px;
+  background-color: #6AAC2A;
+  color: #FFFFFF;
+  font-size: 16px;
+  height: 40px;
+}
+
+.footer-single-pr {
+  min-height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+  margin-top: -325px;
+  padding: 400px 0 0;
+}
+.footer-single-pr .title h2 {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.footer-single-pr .list-contact {
+  margin: 20px 0;
+}
+.footer-single-pr .list-contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff !important;
+  font-size: 16px;
+  line-height: 275.5%;
+}
+.footer-single-pr .list-link {
+  margin: 20px 0;
+}
+.footer-single-pr .list-link ul li {
+  color: #ffffff !important;
+  font-size: 16px;
+  line-height: 275.5%;
+}
+.footer-single-pr .map .title-icon {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-single-pr .map .title-icon h2 {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.footer-single-pr .map .title-icon .list-icon ul {
+  display: flex;
+  justify-content: start;
+  gap: 4px;
+}
+.footer-single-pr .map .map-em {
+  max-width: 100%;
+  margin-top: 20px;
 }
 
 .modal .modal-header h5 {

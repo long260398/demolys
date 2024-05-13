@@ -7,6 +7,8 @@ $thanh_phan = get_field('thanh_phan');
 $hdsd = get_field('hdsd');
 $info_more =get_field('info_more');
 $video = get_field('video');
+$customer = get_field('customer');
+$khuyenmai= get_field('khuyenmai');
 ?>
 <main>
     <section class="title-product">
@@ -253,12 +255,120 @@ $video = get_field('video');
                                                     <img src="<?= getimage($video['img']) ?>"/>
                                                     <img class="icon"
                                                          src="<?php echo get_template_directory_uri() ?>/dist/img/play.svg"/>
-
                                                 </a>
                                             <?php else: ?>
                                                 <img src="<?= getimage($video['img']) ?>">
                                             <?php endif; ?>
                                         </figure>
+        </div>
+    </section>
+    <section class="customer">
+        <div class="container">
+        <div class="title">
+        <h2><?= $customer['title'] ?></h2>
+        </div>
+        <div class="content">
+                <div class="wwd-slie-6 swiper">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($customer['customer'] as $value): ?>
+                            <div class="item-slide swiper-slide">
+                            <div class="avatar">
+                                        <figure>
+                                            <img src="<?= getimage($value['avatar']) ?>" alt="">
+                                        </figure>
+                                    </div>
+                                <div class="icon">
+                                    <figure>
+                                        <img src="<?= get_template_directory_uri() ?>/dist/img/21.png" alt="">
+                                    </figure>
+                                </div>
+                                <div class="desc swiper-no-swiping">
+                                    <?= apply_filters('the_content', $value['content']) ?>
+                                </div>
+                            
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- <div class="swiper-button swiper-button-prev">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M21.8749 29.0492L12.3666 19.5409C11.2437 18.418 11.2437 16.5805 12.3666 15.4576L21.8749 5.94922" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+                </div>
+		        <div class="swiper-button swiper-button-next">
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M13.1251 5.95078L22.6334 15.4591C23.7563 16.582 23.7563 18.4195 22.6334 19.5424L13.1251 29.0508" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section class="khuyenmai" style="background-image: url(<?= get_template_directory_uri() ?>/dist/img/bg-2.png)">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-left">
+                    <div class="image">
+                    <figure>
+                        <img src="<?= getimage($khuyenmai['img']) ?>" alt="">
+                    </figure> 
+                    </div>
+                </div>
+                <div class="col-xl-7 col-right">
+                    <div class="desc">
+                        <div class="title">
+                        <?= apply_filters('the_content', $khuyenmai['content_title']) ?>
+                        </div>
+                        <div class="content">
+                        <ul>
+                            <li>
+                                <p><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 14L6.5118 8.64899C7.16273 8.01705 7.16273 6.98295 6.5118 6.35101L1 1" stroke="#F89422" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Cam kết sản phẩm chính hãng</p>
+                            </li>
+                            <li>
+                                <p><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 14L6.5118 8.64899C7.16273 8.01705 7.16273 6.98295 6.5118 6.35101L1 1" stroke="#F89422" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Hoàn tiền 100% nếu phát hiện hàng giả</p>
+                            </li>
+                            <li>
+                                <p><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 14L6.5118 8.64899C7.16273 8.01705 7.16273 6.98295 6.5118 6.35101L1 1" stroke="#F89422" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Miễn phí vận chuyển trên toàn quốc</p>
+                            </li>
+                            <li>
+                                 <p><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 14L6.5118 8.64899C7.16273 8.01705 7.16273 6.98295 6.5118 6.35101L1 1" stroke="#F89422" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                               Kiểm tra và thanh toán khi nhận hàng</p>
+                            </li>
+                            
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-container">
+                <h2>ĐẶT HÀNG NGAY NHẬN NHIỀU ƯU ĐÃI</h2>
+                <form action="" class="form-co">
+                <input type="text" placeholder="Họ và tên">
+                <input type="text" placeholder="Số điện thoại">
+                <input type="text" placeholder="Địa chỉ">
+                            <button>
+                                <span>Đặt hàng</span>
+                               
+                            </button>
+                </form>
+            </div>
         </div>
     </section>
 </main>
@@ -329,6 +439,34 @@ get_footer();
     });
     productSlider.controller.control = productThumbs;
     productThumbs.controller.control = productSlider;
+
+    new Swiper(".wwd-slie-6", {
+      loop: true,
+      speed: 1500,
+      
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      slidesPerView: 3,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          // allowTouchMove: true,
+        },
+        1024: {
+          // allowTouchMove: false,
+          slidesPerView: 3,
+          spaceBetween: 20,
+        }
+      }
+    });
 </script>
 <script>
     $(document).ready(function(){
